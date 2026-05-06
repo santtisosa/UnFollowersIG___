@@ -13,5 +13,5 @@
   _btn.onmouseout=function(){_btn.style.background='#fff';};
   _ov.appendChild(_btn);
   document.body.appendChild(_ov);
-  _btn.onclick=function(){_ov.remove();_run();var _obs=new MutationObserver(function(){var r=document.querySelector(".run-scan");if(r){r.click();r.style.display="none";_obs.disconnect();}});_obs.observe(document.body,{childList:true,subtree:true});};
+  _btn.onclick=function(){_ov.remove();var _done=false;var _hide=function(){var r=document.querySelector(".run-scan");if(r&&!_done){_done=true;r.click();r.style.display="none";_obs.disconnect();}};var _obs=new MutationObserver(_hide);_obs.observe(document.body,{childList:true,subtree:true});_run();_hide();};
 })();
