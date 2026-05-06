@@ -4,13 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>UnFollowers IG</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
   <style>
+    * { image-rendering: pixelated; }
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       background: #000;
       color: #fff;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-family: 'Press Start 2P', monospace;
       height: 100vh;
       display: flex;
       align-items: center;
@@ -21,51 +25,51 @@
       position: fixed;
       top: 1.5rem;
       right: 1.75rem;
-      font-size: 0.9rem;
-      color: #555;
-      letter-spacing: 0.02em;
+      font-size: 0.55rem;
+      color: #444;
     }
 
     .center {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 1.5rem;
+      gap: 2.5rem;
     }
 
     h1 {
-      font-size: 1.1rem;
-      font-weight: 500;
-      color: #888;
-      letter-spacing: 0.04em;
+      font-size: 0.75rem;
+      color: #666;
     }
 
     button {
       background: #fff;
       color: #000;
       border: none;
-      padding: 0.85rem 2.5rem;
-      font-size: 1rem;
-      font-weight: 600;
-      border-radius: 6px;
+      padding: 1rem 2rem;
+      font-size: 0.65rem;
+      font-family: 'Press Start 2P', monospace;
+      border-radius: 0;
       cursor: pointer;
-      transition: background 0.15s, color 0.15s;
-      letter-spacing: 0.01em;
+      transition: background 0.1s, color 0.1s;
+      line-height: 1.6;
     }
 
     button:hover {
-      background: #e0e0e0;
+      background: #ccc;
     }
 
     button.copied {
-      background: #1a1a1a;
+      background: #000;
       color: #fff;
       border: 1px solid #333;
     }
 
     .hint {
-      font-size: 0.78rem;
-      color: #444;
+      font-size: 0.4rem;
+      color: #333;
+      text-align: center;
+      line-height: 2;
+      max-width: 320px;
     }
   </style>
 </head>
