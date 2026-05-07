@@ -3,18 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>UnFollowers IG</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <title>unfollowers ig</title>
   <style>
-    * { image-rendering: pixelated; }
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       background: #000;
       color: #fff;
-      font-family: 'Press Start 2P', monospace;
+      font-family: monospace;
       height: 100vh;
       display: flex;
       align-items: center;
@@ -24,52 +20,35 @@
     .handle {
       position: fixed;
       top: 1.5rem;
-      right: 1.75rem;
-      font-size: 0.55rem;
-      color: #444;
-    }
-
-    .center {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 2.5rem;
-    }
-
-    h1 {
-      font-size: 0.75rem;
-      color: #666;
+      right: 1.5rem;
+      font-size: 0.65rem;
+      color: #333;
     }
 
     button {
       background: #fff;
       color: #000;
       border: none;
-      padding: 1rem 2rem;
-      font-size: 0.65rem;
-      font-family: 'Press Start 2P', monospace;
-      border-radius: 0;
+      padding: 12px 28px;
+      font-size: 0.7rem;
+      font-family: monospace;
       cursor: pointer;
-      transition: background 0.1s, color 0.1s;
-      line-height: 1.6;
+      letter-spacing: 2px;
     }
 
-    button:hover {
-      background: #ccc;
-    }
+    button:hover { background: #ccc; }
 
     button.copied {
       background: #000;
-      color: #fff;
-      border: 1px solid #333;
+      color: #333;
+      border: 1px solid #1e1e1e;
     }
 
     .hint {
-      font-size: 0.4rem;
-      color: #333;
-      text-align: center;
-      line-height: 2;
-      max-width: 320px;
+      position: fixed;
+      bottom: 1.5rem;
+      font-size: 0.6rem;
+      color: #2a2a2a;
     }
   </style>
 </head>
@@ -77,11 +56,9 @@
 
   <span class="handle">santtisosa</span>
 
-  <div class="center">
-    <h1>unfollowers ig</h1>
-    <button id="btn" onclick="copy()">Copiar script</button>
-    <span class="hint">pegalo en la consola del navegador con instagram abierto</span>
-  </div>
+  <button id="btn" onclick="copy()">copiar script</button>
+
+  <span class="hint">pegar en consola del navegador con instagram abierto</span>
 
   <script>
     let code = '';
@@ -91,9 +68,9 @@
       if (!code) return;
       navigator.clipboard.writeText(code).then(() => {
         const b = document.getElementById('btn');
-        b.textContent = 'Copiado';
+        b.textContent = 'copiado';
         b.classList.add('copied');
-        setTimeout(() => { b.textContent = 'Copiar script'; b.classList.remove('copied'); }, 2000);
+        setTimeout(() => { b.textContent = 'copiar script'; b.classList.remove('copied'); }, 2000);
       });
     }
   </script>
